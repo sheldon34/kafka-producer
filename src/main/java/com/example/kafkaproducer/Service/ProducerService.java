@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class ProducerService {
     private final KafkaTemplate<String, Message> kafkaTemplate;
- public void sendMessage(String topic , Message message){
-     kafkaTemplate.send(topic,message);
+ public void sendMessage( Message message){
+     kafkaTemplate.send("newt",message);
      System.out.println("Message sent "+ message);
  }
 

@@ -13,12 +13,11 @@ import org.springframework.web.bind.annotation.*;
 public class KafkaController {
 private final ProducerService producerService;
 
-@PostMapping("/{topic}")
+@PostMapping("/newt")
     public ResponseEntity<Message> send(
-            @PathVariable String topic,
             @RequestBody Message message
 ){
-    producerService.sendMessage(topic, message);
+    producerService.sendMessage( message);
     return new ResponseEntity<>(message, HttpStatus.OK);
 }
 }

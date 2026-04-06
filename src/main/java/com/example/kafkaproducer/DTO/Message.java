@@ -6,8 +6,8 @@ import lombok.Data;
 @AllArgsConstructor
 @Data
 public class Message {
+   private String name;
    private String title;
-   private String content;
 
 
 }
